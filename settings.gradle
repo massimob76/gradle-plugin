@@ -9,4 +9,4 @@
 
 rootProject.name = 'gradle-plugin'
 
-include 'core', 'test'
+include 'plugin-core', 'plugin-test'
