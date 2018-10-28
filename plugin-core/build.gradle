@@ -6,7 +6,7 @@ plugins {
 gradlePlugin {
     plugins {
         greeting {
-            id = 'greeting'
+            id = 'com.greeting'
             implementationClass = 'com.greeting.GreetingPlugin'
         }
     }
