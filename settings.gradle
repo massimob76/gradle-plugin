@@ -8,5 +8,3 @@
  */
 
 rootProject.name = 'gradle-plugin'
-
-include 'plugin-core'
