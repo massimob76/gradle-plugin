@@ -49,6 +49,24 @@ class GreetingPluginTest {
     }
 
     @Test
+    void greetingHasDescriptionAndGroupTest() throws Exception {
+
+        copyResourceToTestProjectDir("build-gradle");
+
+        BuildResult result = GradleRunner.create()
+                .withProjectDir(testProjectDir.getRoot())
+                .withPluginClasspath()
+                .withArguments("tasks")
+                .build();
+
+        assertEquals(SUCCESS, result.task(":tasks").getOutcome());
+        assertThat(result.getOutput(), containsString(
+                "My custom plugin tasks\n" +
+                "----------------------\n" +
+                "hello - hello world task"));
+    }
+
+    @Test
     void greetingCustomMessageTest() throws Exception {
 
         copyResourceToTestProjectDir("build-gradle-custom-name");
