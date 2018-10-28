@@ -1,4 +1,3 @@
-- create gradle task
 - play with extension parameters
 - dynamic task name
 - better junit test of task
